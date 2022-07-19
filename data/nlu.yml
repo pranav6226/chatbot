@@ -1,0 +1,136 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: main
+  examples: |
+    - main
+    - main menu
+
+- intent: job
+  examples: |
+    - I am looking for a job
+    - I want to apply for job
+    - job
+    - apply
+    - searching for job
+
+- intent: product
+  examples: |
+    - I am looking for a product 
+    - product
+    - what are your products 
+    - products offered
+    - HRMS
+
+- intent: service
+  examples: |
+    - I am looking for a service
+    - what are the services you offer
+    - type of services
+    - services offered
+    - service
+
+- intent: contact
+  examples: |
+    - contact
+    - contact us
+    - how can I contact you
+    - contact information
+    - what is your address
+    - what is your phone number
+    - contact number
+
+- intent: demo
+  examples: |
+    - I would like a demo
+    - I want a demo
+    - request demo
+    - request callback
+    - I want a call back
+
+- intent: staffing
+  examples: |
+    - staffing
+    - IT staffing
+    - staffing services
+    - what is staffing
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - what is 2+2
+    - who is the president
+    - how old are you
+
+
+- intent: ess
+  examples: |
+    - ess
+    - what is ess 
+    - what is employee self service
+    - employee self service
+
+- intent: payroll
+  examples: |
+    - payroll service
+    - payroll management
+    - payroll software
+    - payroll
+    - pay
+
+- intent: atlev
+  examples: |
+    - attendance
+    - attendance and leave
+    - attendance and leave management
+    - leave management
+    - attendance management 

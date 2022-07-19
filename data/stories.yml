@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+
+- story: Details form 
+  steps:
+  - intent: demo
+  - action: utter_inform
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Pranav Mahesh
+  - slot_was_set:
+    - requested_slot: phone
+  - slot_was_set:
+    - phone: 9845588899
+    - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: pranav.m@dcoretech.in
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_demo
+  - action: utter_more_info
+  - action: action_save_conversation
+  - action: action_reset_slots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

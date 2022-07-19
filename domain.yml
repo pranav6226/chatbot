@@ -1,0 +1,230 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - job
+  - product
+  - service
+  - contact
+  - staffing
+  - demo
+  - main
+  - ess
+  - payroll
+  - sandc
+  - atlev
+  - out_of_scope
+
+
+forms:
+  details_form:
+    required_slots:
+      - name
+      - phone
+      - email
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: name
+  phone:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: phone
+  email:
+    type: text 
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: email
+    
+responses:
+  utter_greet:
+  - text: "Hello, how can I help you today?"
+
+
+  utter_main:
+    - text: "Ask a question."
+      buttons:
+      - title: "How can I apply for a job?"
+        payload: /job
+      - title: "What are the products you offer?"
+        payload: /product
+      - title: "What are the services you offer?"
+        payload: /service
+      - title: "How can I contact you?"
+        payload: /contact
+
+  utter_job:
+  - text: "Please [click here](https://careers.alpconsulting.in/Default.aspx?pum_form_popup_id=3128) to apply for a job 💼 "
+  
+  utter_product:
+  - text: "Here are our products."
+    buttons:
+    - title : "Employee Self Service"
+      payload : /ess
+    - title : "Payroll Management"
+      payload : /payroll
+    - title : "Statutory & Compliance"
+      payload: /sandc
+    - title : "Attendance & Leave Management"
+      payload: /atlev
+    - title : "Back to Main Menu"
+      payload: /main
+
+  utter_service:
+  - text: "Here are our services."
+    buttons:
+    - title : "Staffing"
+      payload : /staffing
+    - title : "Payroll Outsourcing"
+      payload : /demo
+    - title : "Labour Complaince"
+      payload: /demo
+    - title : "IT Consulting"
+      payload: /demo
+    - title : "Back to Main Menu"
+      payload: /main
+    
+
+  utter_staffing:
+  - text: "Here are our staffing services"
+    buttons:
+    - title : "Permanent Staffing"
+      payload : /demo
+    - title : "Contract to Hire"
+      payload : /demo
+    - title : "Employee Leasing"
+      payload: /demo
+    - title : "RPO"
+      payload: /demo
+    - title : "NAPS"
+      payload: /demo
+    - title : "Back to Services"
+      payload: /service
+
+  utter_contact_no:
+  - text: "📍 No. 11/2, KHR House\tPalace Road, Vasanthnagar\t Bangalore - 560052.\t      📞 +91-966354-6688"
+
+  utter_contact_us:
+  - text: "Please [click here](https://dcoretech.in/contacts.html) for our complete contact information"
+
+  utter_demo :
+  - text: "We will contact you soon, thank you for showing interest."
+
+  utter_more_info:
+  - text: "For more info on all products [click here](https://dcoretech.in/hrms.html)"
+    buttons:
+    - title : "Back to Main Menu"
+      payload : /main
+  
+  utter_did_that_help:
+  - text: "Did that help you?"
+    buttons:
+    - title : "Yes"
+      payload : /affirm
+    - title : "No"
+      payload : /deny
+
+
+  utter_sorry:
+  - text: "I'm sorry to hear that, would you like a callback from our agent?"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Back to Main Menu"
+      payload : /main
+
+
+  utter_thanks:
+  - text: "Thanks for chatting with us!"
+    buttons:
+    - title: "Back to Main Menu"
+      payload: /main
+
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_default:
+  - text: I'm sorry, I can't help you.
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Back to Main Menu"
+      payload : /main
+  
+  utter_iamabot:
+  - text: "I am a bot"
+
+  utter_ask_name: 
+  - text: "Please enter your Name"
+
+  utter_ask_phone:
+  - text: "{name} can you please enter your Phone Number"
+
+  utter_ask_email:
+  - text: "{name} can you please enter your Company E-mail Address"
+
+  utter_inform:
+  - text: "Please help me with some of your information to proceed further.."
+
+  utter_out_of_scope:
+  - text: "I didn't quite understand that, can you please rephrase what you said"
+
+
+  utter_ess:
+  - text: "This resource has a Provision to view/print pay-slips for multiple months at the same time it also includes complete solution towards Yearly tax declaration and IT Statements. Here you can view holiday list, HR Policy Manual, Reimbursements claim upload etc. [Read more](https://dcoretech.in/hrms-employee-self-service.html)"
+    buttons:
+    - title : "Request a demo"
+      payload : /demo
+    - title : "Browse more products"
+      payload : /product
+
+  utter_payroll:
+  - text: "Payroll management gives you the upper hand on all financial records of salaries for an employee, wages, bonuses and deductions. The tool ensures that all employees are paid accurately and timely with the correct deductions and withholdings. [Read more](https://dcoretech.in/hrms-payroll-management.html)"
+    buttons:
+    - title : "Request a demo"
+      payload : /demo
+    - title : "Browse more products"
+      payload : /product
+
+  utter_sandc:
+  - text: "This gives you insights that are imperative to getting your business statutorily and legally compliant. Provides continuous support and updates to help you manage the complexities of various legislations. Also pro-actively keep abreast of market dynamics peculiar to your business and offer regular legislative updates that will help you respond with agility to the constantly evolving landscape of statutes and labour laws. [Read more](https://dcoretech.in/hrms-statutory-compliance.html)"
+    buttons:
+    - title : "Request a demo"
+      payload : /demo
+    - title : "Browse more products"
+      payload : /product
+
+
+  utter_atlev:
+  - text: "This gives complete access to employees Shifts & Production plan creation which is integrated with the attendance machine and personalize leave categories and organise complex leave strategies for any type of industry having locations in multiple countries. [Read more](https://dcoretech.in/hrms-attendance-management.html)"
+    buttons:
+    - title : "Request a demo"
+      payload : /demo
+    - title : "Browse more products"
+      payload : /product
+actions:
+- validate_details_form
+- action_save_conversation
+- action_reset_slots
+
+
+
+session_config:
+  session_expiration_time: 1
+  carry_over_slots_to_new_session: false

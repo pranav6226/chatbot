@@ -1,0 +1,111 @@
+version: "3.1"
+
+rules:
+
+- rule: Give main menu when greet or say main
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_main
+
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_thanks
+
+- rule: job option
+  steps:
+  - intent: job
+  - action: utter_job
+  - action: utter_did_that_help
+
+- rule: contact option
+  steps:
+  - intent: contact
+  - action: utter_contact_no
+  - action: utter_contact_us
+  - action: utter_did_that_help
+
+
+- rule: affirm 
+  steps:
+  - intent: affirm
+  - action: utter_thanks
+
+- rule: deny
+  steps:
+  - intent: deny
+  - action: utter_sorry
+
+- rule: main when main
+  steps:
+  - intent: main
+  - action: utter_main
+
+
+- rule: out-of-scope
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope
+  - action: utter_main
+
+
+
+- rule: Activate form
+  steps:
+  - intent: demo
+  - action: utter_inform
+  - action: details_form
+  - active_loop: details_form
+
+- rule: Submit form
+  condition:
+  - active_loop: details_form
+  steps:
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_demo
+  - action: utter_more_info
+  - action: action_save_conversation
+  - action: action_reset_slots
+
+  
+- rule: product
+  steps:
+  - intent: product
+  - action: utter_product
+
+
+- rule: service
+  steps: 
+  - intent: service
+  - action: utter_service
+
+- rule: staffing option
+  steps: 
+  - intent: staffing
+  - action: utter_staffing
+
+
+- rule: ess option
+  steps:
+  - intent: ess
+  - action: utter_ess
+
+- rule: payroll option
+  steps:
+  - intent: payroll
+  - action: utter_payroll
+
+- rule: sandc option
+  steps:
+  - intent: sandc
+  - action: utter_sandc
+
+- rule: atlev option
+  steps:
+  - intent: atlev
+  - action: utter_atlev
