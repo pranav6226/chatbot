@@ -22,6 +22,7 @@ services:
     restart: always
     volumes:
     - ./actions:/app/actions
+    command: ["rasa","run","actions"]
     ports:
     - '5005:5005'
     networks:
