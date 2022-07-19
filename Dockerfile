@@ -1,7 +1,6 @@
 FROM python:3.10.4 AS BASE
 
 RUN apt-get update \ 
-    && apt-get --assume--yes --no-install-recommends install \
     build-essential \
     curl \
     git \
