@@ -12,7 +12,7 @@ services:
     command: bash -c "rm -rf models/* && rasa train && rasa run --enable-api --cors \"*\""
     working_dir: /app
     ports:
-    - '5006:5005'
+    - '5005:8080'
     networks:
     - all
 
