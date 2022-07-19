@@ -1,4 +1,4 @@
-FROM python:3.10.4-stretch AS BASE
+FROM python:3.10.4 AS BASE
 
 RUN apt-get update \ 
     && apt-get --assume--yes --no-install-recommends install \
