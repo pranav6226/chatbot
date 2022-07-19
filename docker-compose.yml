@@ -13,6 +13,7 @@ services:
     working_dir: '/app'
     ports:
     - '5005:8080'
+    public : true
     networks:
     - all
 
