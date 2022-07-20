@@ -20,6 +20,7 @@ intents:
   - out_of_scope
   - permstaff
   - rpo
+  - payout
 
 
 forms:
@@ -95,7 +96,7 @@ responses:
     - title : "Staffing"
       payload : /staffing
     - title : "Payroll Outsourcing"
-      payload : /demo
+      payload : /payout
     - title : "Labour Complaince"
       payload: /demo
     - title : "IT Consulting"
@@ -246,8 +247,13 @@ responses:
     - title : "Browse more staffing services"
       payload : /staffing
 
-
-
+  utter_payout:
+  - text: "When you want to go beyond the mentality of just giving out paychecks to your employees, a payroll service can help bring about new business insights and also help you focus on what you do best - running your own business. [Read more](https://alp.consulting/payroll-services/)"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more services"
+      payload : /service
 
 actions:
 - validate_details_form

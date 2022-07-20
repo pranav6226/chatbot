@@ -124,3 +124,8 @@ rules:
   steps:
   - intent: rpo
   - action: utter_rpo
+
+- rule: payout option
+  steps:
+  - intent: payout
+  - action: utter_payout

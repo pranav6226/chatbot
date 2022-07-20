@@ -121,11 +121,9 @@ nlu:
 
 - intent: payroll
   examples: |
-    - payroll service
+    - payroll product
     - payroll management
     - payroll software
-    - payroll
-    - pay
 
 - intent: atlev
   examples: |
@@ -154,3 +152,8 @@ nlu:
     - recruitment
     - recruitmant processing
     - recruitment process outsourcing
+
+- intent: payout
+  examples: |
+    - payroll outsourcing
+    - payroll service
