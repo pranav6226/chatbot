@@ -118,7 +118,7 @@ responses:
       payload: /service
 
   utter_contact_no:
-  - text: "📍 No. 11/2, KHR House\tPalace Road, Vasanthnagar\t Bangalore - 560052.\t      📞 +91-966354-6688"
+  - text: "📍 No. 11/2, KHR House\tPalace Road, Vasanthnagar\t Bangalore - 560052.\t\n\n\n\n\n📞 +91-966354-6688"
 
   utter_contact_us:
   - text: "Please [click here](https://dcoretech.in/contacts.html) for our complete contact information"
