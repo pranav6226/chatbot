@@ -114,3 +114,8 @@ rules:
   steps:
   - intent: itcons
   - action: utter_itcons
+
+- rule: permstaff option
+  steps:
+  - intent: permstaff
+  - action: utter_permstaff

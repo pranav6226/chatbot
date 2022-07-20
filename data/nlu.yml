@@ -102,7 +102,7 @@ nlu:
     - IT staffing
     - staffing services
     - what is staffing
-
+    - staff
 
 - intent: out_of_scope
   examples: |
@@ -140,3 +140,11 @@ nlu:
     - IT
     - IT consulting
     - consulting
+
+- intent: permstaff
+  examples: |
+    - permanent
+    - permanent staffing
+    - perm staff
+
+

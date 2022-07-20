@@ -18,6 +18,7 @@ intents:
   - atlev
   - itcons
   - out_of_scope
+  - permstaff
 
 
 forms:
@@ -225,9 +226,17 @@ responses:
     buttons:
     - title : "Request a callback"
       payload : /demo
-    - title : "Browse more products"
-      payload : /product
-      
+    - title : "Browse more services"
+      payload : /service
+
+  utter_permstaff:
+  - text: "Datacore Technologies under the guidance of its parent company Alp consulting limited and Outsourcing Inc as established a dedicated international recruitment team specialized in sourcing people from various countries across APAC for our clients based in middle east, USA, Europe, UK, Canada etc. [Read more](https://dcoretech.in/permanent-staffing.html)"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more staffing services"
+      payload : /staffing
+
 actions:
 - validate_details_form
 - action_save_conversation
