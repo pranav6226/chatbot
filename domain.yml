@@ -21,6 +21,7 @@ intents:
   - permstaff
   - rpo
   - payout
+  - labcomp
 
 
 forms:
@@ -98,7 +99,7 @@ responses:
     - title : "Payroll Outsourcing"
       payload : /payout
     - title : "Labour Complaince"
-      payload: /demo
+      payload: /labcomp
     - title : "IT Consulting"
       payload: /itcons
     - title : "Back to Main Menu"
@@ -254,6 +255,16 @@ responses:
       payload : /demo
     - title : "Browse more services"
       payload : /service
+
+
+  utter_labcomp:
+  - text: "The landscape of statutes of labour laws is constantly evolving, and it takes a special agility to keep abreast of all the latest developments and ensure compliance for legal laws. We offer compliance services for companies to stay safe and up to date with the legal framework. [Read more](https://alp.consulting/statutory-compliance-services/)"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more services"
+      payload : /service
+
 
 actions:
 - validate_details_form

@@ -129,3 +129,8 @@ rules:
   steps:
   - intent: payout
   - action: utter_payout
+
+- rule: labcomp option
+  steps:
+  - intent: labcomp
+  - action: utter_labcomp

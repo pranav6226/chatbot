@@ -132,6 +132,11 @@ nlu:
     - attendance and leave management
     - leave management
     - attendance management 
+
+- intent: sandc
+  example: |
+    - statutory
+    - statutory and compliance
     
 - intent: itcons
   examples: |
@@ -157,3 +162,8 @@ nlu:
   examples: |
     - payroll outsourcing
     - payroll service
+
+- intent: labcomp
+  examples: |
+    - labour compliance
+    - labour
