@@ -107,7 +107,7 @@ responses:
   - text: "Here are our staffing services"
     buttons:
     - title : "Permanent Staffing"
-      payload : /demo
+      payload : /permstaff
     - title : "Contract to Hire"
       payload : /demo
     - title : "Employee Leasing"
