@@ -19,6 +19,7 @@ intents:
   - itcons
   - out_of_scope
   - permstaff
+  - rpo
 
 
 forms:
@@ -112,8 +113,8 @@ responses:
       payload : /demo
     - title : "Employee Leasing"
       payload: /demo
-    - title : "RPO"
-      payload: /demo
+    - title : "Recruitment Process Outsourcing"
+      payload: /rpo
     - title : "NAPS"
       payload: /demo
     - title : "Back to Services"
@@ -236,6 +237,17 @@ responses:
       payload : /demo
     - title : "Browse more staffing services"
       payload : /staffing
+
+  utter_rpo:
+  - text: "Understanding the today's challenge, need of customers and our core strengths, We have offer following services: Activity owned delivery, Success based/End delivery and Recruiter on demand. [Read more](https://alp.consulting/recruitment-process-outsourcing/)" 
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more staffing services"
+      payload : /staffing
+
+
+
 
 actions:
 - validate_details_form

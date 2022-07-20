@@ -119,3 +119,8 @@ rules:
   steps:
   - intent: permstaff
   - action: utter_permstaff
+
+- rule: rpo option
+  steps:
+  - intent: rpo
+  - action: utter_rpo

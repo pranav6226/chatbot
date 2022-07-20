@@ -148,3 +148,9 @@ nlu:
     - perm staff
 
 
+- intent: rpo
+  examples: |
+    - rpo 
+    - recruitment
+    - recruitmant processing
+    - recruitment process outsourcing
