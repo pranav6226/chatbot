@@ -95,7 +95,7 @@ responses:
     - title : "Payroll Outsourcing"
       payload : /demo
     - title : "Labour Complaince"
-      payload: /demo
+      payload: /itcons
     - title : "IT Consulting"
       payload: /demo
     - title : "Back to Main Menu"
