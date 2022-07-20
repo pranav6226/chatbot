@@ -16,6 +16,7 @@ intents:
   - payroll
   - sandc
   - atlev
+  - itcons
   - out_of_scope
 
 
@@ -218,6 +219,15 @@ responses:
       payload : /demo
     - title : "Browse more products"
       payload : /product
+      
+    utter_itcons:
+  - text: "Using IT as a key enabler, we offer you services that stretch across the strategic and operational issues of business change, so that you seize the right opportunities for growth. We integrate people, processes and technology to help you manage your business efficiently and stay ahead of competition. [Read more](https://dcoretech.in/it-consulting.html)"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more products"
+      payload : /product
+      
 actions:
 - validate_details_form
 - action_save_conversation
