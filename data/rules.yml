@@ -134,3 +134,14 @@ rules:
   steps:
   - intent: labcomp
   - action: utter_labcomp
+
+- rule: elease option
+  steps:
+  - intent: elease
+  - action: utter_elease
+
+
+- rule: naps option
+  steps:
+  - intent: naps
+  - action: utter_naps

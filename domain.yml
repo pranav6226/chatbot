@@ -22,7 +22,8 @@ intents:
   - rpo
   - payout
   - labcomp
-
+  - elease
+  - naps
 
 forms:
   details_form:
@@ -114,11 +115,11 @@ responses:
     - title : "Contract to Hire"
       payload : /demo
     - title : "Employee Leasing"
-      payload: /demo
+      payload: /elease
     - title : "Recruitment Process Outsourcing"
       payload: /rpo
     - title : "NAPS"
-      payload: /demo
+      payload: /naps
     - title : "Back to Services"
       payload: /service
 
@@ -265,6 +266,21 @@ responses:
     - title : "Browse more services"
       payload : /service
 
+  utter_elease:
+  - text: "Looking to recruit new talent without getting bogged down by the hassles of HR management? Employee leasing solutions may be your best choice to get new hires on board swiftly and painlessly. [Read more](https://alp.consulting/employee-leasing/)"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more staffing services"
+      payload : /staffing
+
+  utter_naps:
+  - text: "NAPS is a key program launched by the Ministry of Skill Development and Entrepreneurship (MSDE) to proactively create and increase the number of skilled manpower in India, in addition to making apprenticeship engagement smoother for both candidates and employers. [Read more](https://alp.consulting/training-solutions/naps/)"
+    buttons:
+    - title : "Request a callback"
+      payload : /demo
+    - title : "Browse more staffing services"
+      payload : /staffing
 
 actions:
 - validate_details_form

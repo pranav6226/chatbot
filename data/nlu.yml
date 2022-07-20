@@ -118,6 +118,7 @@ nlu:
     - what is ess 
     - what is employee self service
     - employee self service
+    - ess software
 
 - intent: payroll
   examples: |
@@ -167,3 +168,15 @@ nlu:
   examples: |
     - labour compliance
     - labour
+
+- intent: elease
+  examples: |
+    - employee leasing
+    - leasing
+
+- intent: naps
+  examples: |
+    - naps
+    - NAPS
+    - National
+    - Apprentice
