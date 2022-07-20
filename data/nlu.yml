@@ -134,3 +134,9 @@ nlu:
     - attendance and leave management
     - leave management
     - attendance management 
+    
+- intent: itcons
+  examples: |
+    - IT
+    - IT consulting
+    - consulting
