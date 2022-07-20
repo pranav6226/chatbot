@@ -135,7 +135,7 @@ nlu:
     - attendance management 
 
 - intent: sandc
-  example: |
+  examples: |
     - statutory
     - statutory and compliance
     
