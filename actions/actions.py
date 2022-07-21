@@ -64,8 +64,8 @@ class ValidateDetailsForm(FormValidationAction):
         test_string = slot_value
         result = re.match(pattern, test_string)
         if result:
-            client = MongoClient(port=27017)
-            db=client.chatbot
+            client = MongoClient(mongodb+srv://pranavmm:<password>@cluster0.ywa3s.mongodb.net/?retryWrites=true&w=majority)
+            db=client.get_databse('Chatbot')
             name = tracker.get_slot("name")
             phone = tracker.get_slot("phone")
             email = tracker.get_slot("email")
@@ -74,7 +74,7 @@ class ValidateDetailsForm(FormValidationAction):
                     'phone' : phone,
                     'email' : email
                 }
-            result = db.details.insert_one(details)
+            result = db.Details.insert_one(details)
             global id 
             id = result.inserted_id
             client.close()
