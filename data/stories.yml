@@ -24,7 +24,6 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: utter_demo
-  - action: utter_more_info
   - action: action_save_conversation
   - action: action_reset_slots
 

@@ -64,21 +64,6 @@ class ValidateDetailsForm(FormValidationAction):
         test_string = slot_value
         result = re.match(pattern, test_string)
         if result:
-            client = MongoClient("mongodb+srv://pranavmm:IKJmGfPCmq2OeYpG@cluster0.ywa3s.mongodb.net/?retryWrites=true&w=majority")
-            db=client.get_database('Chatbot')
-            global name 
-            name = tracker.get_slot("name")
-            phone = tracker.get_slot("phone")
-            email = tracker.get_slot("email")
-            details = {
-                    'name' : name,
-                    'phone' : phone,
-                    'email' : email
-                }
-            result = db.Details.insert_one(details)
-            # global id 
-            # id = result.inserted_id
-            client.close()
             return {"email": slot_value}
         else:
             dispatcher.utter_message(text="Please enter a valid Company E-mail address..")
@@ -101,15 +86,27 @@ class ActionSaveConversation(Action):
                 chat_data+=f"user: {i['text']}\n"
             elif i['event'] == 'bot':
                 chat_data+=f"bot: {i['text']}\n"
+        client = MongoClient("mongodb+srv://pranavmm:IKJmGfPCmq2OeYpG@cluster0.ywa3s.mongodb.net/?retryWrites=true&w=majority")
+        db=client.get_database('Chatbot')
+        name = tracker.get_slot("name")
+        phone = tracker.get_slot("phone")
+        email = tracker.get_slot("email")
+        details = {
+                'name' : name,
+                'phone' : phone,
+                'email' : email,
+                'transcript': chat_data
+            }
+        db.Details.insert_one(details)
+            # global id 
+            # id = result.inserted_id
+        client.close()
         # save_path = 'J:/OneDrive - Alp Consulting Ltd/ChatBot/Transcripts/'
         # filename = "transcript_{0}.txt".format(id)
         # completeName = os.path.join(save_path, filename)
         
         # with open(completeName,'w') as file:
         #     file.write(chat_data) 
-        client = MongoClient("mongodb+srv://pranavmm:IKJmGfPCmq2OeYpG@cluster0.ywa3s.mongodb.net/?retryWrites=true&w=majority")
-        db=client.get_database('Chatbot')
-        db.Details.updateOne({'name':name}, { $set: {'transcript': chat_data}})
         return []
 
 
