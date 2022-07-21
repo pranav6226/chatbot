@@ -131,12 +131,6 @@ responses:
 
   utter_demo :
   - text: "We will contact you soon, thank you for showing interest."
-
-  # utter_more_info:
-  # - text: "For more info on all products [click here](https://dcoretech.in/hrms.html)"
-  #   buttons:
-  #   - title : "Back to Main Menu"
-  #     payload : /main
   
   utter_did_that_help:
   - text: "Did that help you?"
