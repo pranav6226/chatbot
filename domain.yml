@@ -131,6 +131,9 @@ responses:
 
   utter_demo :
   - text: "We will contact you soon, thank you for showing interest."
+    buttons:
+    - title : "Back to Main Menu"
+      payload : /main
   
   utter_did_that_help:
   - text: "Did that help you?"
